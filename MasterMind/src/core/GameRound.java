@@ -25,7 +25,7 @@ public class GameRound {
 		this.code = code;
 		this.codeSize = code.size();
 		this.finished = false;
-		this.numberOfTrials = 0;
+		this.numberOfTrials = 2;
 		this.historyTrials = new ArrayList<>();
 		this.historyMatches = new ArrayList<>();
 

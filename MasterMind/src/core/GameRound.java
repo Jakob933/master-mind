@@ -25,7 +25,7 @@ public class GameRound {
 		this.code = code;
 		this.codeSize = code.size();
 		this.finished = false;
-		this.numberOfTrials = 0;
+		this.numberOfTrials = 3;
 		this.historyTrials = new ArrayList<>();
 		this.historyMatches = new ArrayList<>();
 
@@ -117,12 +117,12 @@ public class GameRound {
 	}
 
 	public void printRules() {
-		System.out.println("Folgende Farben sind verfügbar: \n" + Arrays.asList(GameStoneColor.values()) + "\n");
+		System.out.println("Folgende Farben sind verfÃ¼gbar: \n" + Arrays.asList(GameStoneColor.values()) + "\n");
 		
-		System.out.println("Regeln: Keine Farben dürfen doppelt eingegeben werden "
+		System.out.println("Regeln: Keine Farben dÃ¼rfen doppelt eingegeben werden "
 				+ "\n * bedeutet richtige Farbe, falsche Position "
 				+ "\n # bedeutet richtige Farbe, richtige Position"
-				+ "\n Codelänge: " + codeSize + "\n");
+				+ "\n CodelÃ¤nge: " + codeSize + "\n");
 	}
 
 	public void setNumberOfTrialsByUserInput() throws IOException {
@@ -167,7 +167,7 @@ public class GameRound {
 		}
 
 		if (checkDuplicateChar(code)) {
-			System.out.println("Farben dürfen kein Duplikat enthalten, erneut versuchen...");
+			System.out.println("Farben dÃ¼rfen kein Duplikat enthalten, erneut versuchen...");
 			return getCodeFromUser(codeSize);
 		}
 		
